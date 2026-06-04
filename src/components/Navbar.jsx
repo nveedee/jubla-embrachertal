@@ -12,6 +12,7 @@ const navLinks = [
   { label: 'Bilder', to: '/bilder' },
   { label: 'Team', to: '/team' },
   { label: 'Kontakt', to: '/kontakt' },
+
 ]
 
 export default function Navbar() {

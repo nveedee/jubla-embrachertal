@@ -10,7 +10,6 @@ import Lager from './pages/Lager'
 import Gruppenstunde from './pages/Gruppenstunde'
 import Bilder from './pages/Bilder'
 import TeamPage from './pages/Team'
-import AgendaPage from './pages/Agenda'
 import Kontakt from './pages/Kontakt'
 import Anmeldung from './pages/Anmeldung'
 import { useMobileAnimations } from './hooks/useMobileAnimations'
@@ -32,8 +31,7 @@ function App() {
             <Route path="/gruppenstunde" element={<Gruppenstunde />} />
             <Route path="/bilder" element={<Bilder />} />
             <Route path="/team" element={<TeamPage />} />
-            <Route path="/agenda" element={<AgendaPage />} />
-            <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/anmeldung" element={<Anmeldung />} />
           </Routes>
         </PageTransition>

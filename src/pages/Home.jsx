@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   HiChevronRight, HiUserGroup, HiSun, HiPhotograph,
-  HiUsers, HiCalendar, HiMail,
+  HiUsers, HiMail,
 } from 'react-icons/hi'
 import Hero from '../components/Hero'
 import Stats from '../components/Stats'
+import Countdown from '../components/Countdown'
 
 const quickNavCards = [
   {
@@ -37,13 +38,6 @@ const quickNavCards = [
     color: '#283583',
   },
   {
-    to: '/agenda',
-    icon: HiCalendar,
-    title: 'Agenda',
-    desc: 'Kommende Events und Termine',
-    color: '#2598D5',
-  },
-  {
     to: '/kontakt',
     icon: HiMail,
     title: 'Kontakt',
@@ -57,6 +51,7 @@ export default function Home() {
     <main>
       <Hero />
       <Stats />
+      <Countdown />
 
       <section className="py-24 bg-white dark:bg-[#0f172a] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

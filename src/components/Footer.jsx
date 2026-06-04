@@ -10,7 +10,6 @@ const navLinks = [
   { label: 'Gruppenstunde', to: '/gruppenstunde' },
   { label: 'Bilder', to: '/bilder' },
   { label: 'Team', to: '/team' },
-  { label: 'Agenda', to: '/agenda' },
   { label: 'Kontakt', to: '/kontakt' },
 ]
 
