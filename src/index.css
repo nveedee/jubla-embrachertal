@@ -104,6 +104,36 @@ html.dark input, html.dark textarea {
   border-color: #334155 !important;
 }
 
+/* Mobile UX improvements */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
+button:active, a:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.2s ease;
+  }
+  .card:active {
+    transform: scale(0.98) !important;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
