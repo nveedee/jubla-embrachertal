@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "icon": "users",
+    "title": "Zusammen sein",
+    "description": "Wir schaffen einen Ort der Zugehörigkeit. Gemeinsam lachen, spielen und wachsen – Freundschaften fürs Leben entstehen hier.",
+    "color": "#283583",
+    "bgColor": "#EEF0F9"
+  },
+  {
+    "id": 2,
+    "icon": "vote",
+    "title": "Mitbestimmen",
+    "description": "Jede Stimme zählt. Kinder und Jugendliche gestalten ihre Jubla aktiv mit und übernehmen Verantwortung.",
+    "color": "#2598D5",
+    "bgColor": "#E8F5FB"
+  },
+  {
+    "id": 3,
+    "icon": "heart",
+    "title": "Glauben leben",
+    "description": "Werte wie Respekt, Nächstenliebe und Dankbarkeit sind die Grundlage unseres Zusammenlebens.",
+    "color": "#E6007E",
+    "bgColor": "#FCE6F2"
+  },
+  {
+    "id": 4,
+    "icon": "sparkles",
+    "title": "Kreativ sein",
+    "description": "Bauen, basteln, Theater spielen, singen – Kreativität kennt bei uns keine Grenzen.",
+    "color": "#283583",
+    "bgColor": "#EEF0F9"
+  },
+  {
+    "id": 5,
+    "icon": "mountain",
+    "title": "Natur erleben",
+    "description": "Wandern, Lagerfeuer, Sterne beobachten – wir entdecken die Schönheit der Natur und lernen sie zu schützen.",
+    "color": "#2598D5",
+    "bgColor": "#E8F5FB"
+  }
+]
