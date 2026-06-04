@@ -9,24 +9,28 @@ const groups = [
     age: '1. Kindergarten – 1. Klasse',
     note: 'Nach Absprache früher möglich',
     color: '#283583',
+    leaders: ['Noel', 'Linus', 'Livia', 'Melvin'],
   },
   {
-    name: 'Girls',
+    name: 'Füchsli',
     age: '2. – 5. Klasse',
-    note: 'Mädchengruppe',
+    note: '',
     color: '#2598D5',
+    leaders: ['Valentina', 'Alisha', 'Jil'],
   },
   {
     name: 'Kaugummischlangä',
     age: '2. – 5. Klasse',
     note: 'Jungsgruppe',
     color: '#283583',
+    leaders: ['Matteo', 'Fernando', 'Lars', 'Jay'],
   },
   {
     name: '15ner',
     age: '6. Klasse – 3. Oberstufe',
     note: '',
     color: '#2598D5',
+    leaders: ['Tina', 'Yannis', 'Nina', 'Marlon'],
   },
 ]
 
@@ -91,11 +95,22 @@ export default function Gruppenstunde() {
                   className="rounded-2xl p-5 border-l-4 bg-jubla-light"
                   style={{ borderColor: g.color }}
                 >
-                  <h3 className="font-heading font-bold text-jubla-dark" style={{ color: g.color }}>
+                  <h3 className="font-heading font-bold" style={{ color: g.color }}>
                     {g.name}
                   </h3>
                   <p className="font-body text-jubla-dark text-sm mt-1">{g.age}</p>
                   {g.note && <p className="font-body text-jubla-gray text-xs mt-0.5 italic">{g.note}</p>}
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {g.leaders.map(l => (
+                      <span
+                        key={l}
+                        className="text-xs font-body font-medium px-2.5 py-1 rounded-full text-white"
+                        style={{ backgroundColor: g.color }}
+                      >
+                        {l}
+                      </span>
+                    ))}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -117,7 +132,7 @@ export default function Gruppenstunde() {
               {[
                 'Anmeldeformular als PDF herunterladen',
                 'Vollständig ausfüllen und unterschreiben',
-                'Per WhatsApp an Jil Grabner oder Dean Badrutt senden',
+                'Per WhatsApp an Jil, Noel oder Linus senden',
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold mt-0.5">
@@ -148,7 +163,7 @@ export default function Gruppenstunde() {
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white font-heading font-semibold px-6 py-4 rounded-2xl transition-colors duration-300"
               >
                 <FaWhatsapp size={20} />
-                WhatsApp Jil / Dean
+                WhatsApp Jil / Noel / Linus
               </motion.a>
             </div>
           </motion.div>
@@ -165,8 +180,9 @@ export default function Gruppenstunde() {
               <h3 className="font-heading font-bold text-xl mb-4">Fragen? Meld dich bei uns!</h3>
               <div className="flex flex-col sm:flex-row gap-6">
                 {[
-                  { name: 'Jil Grabner', phone: '+41 79 451 35 81', wa: 'https://wa.me/41794513581' },
-                  { name: 'Dean Badrutt', phone: '+41 78 866 59 87', wa: 'https://wa.me/41788665987' },
+                  { name: 'Jil Grabner',      phone: '+41 79 451 35 81', wa: 'https://wa.me/41794513581' },
+                  { name: 'Noel von Däniken', phone: '+41 76 544 40 95', wa: 'https://wa.me/41765444095' },
+                  { name: 'Linus Kreis',      phone: '+41 76 574 82 23', wa: 'https://wa.me/41765748223' },
                 ].map(p => (
                   <div key={p.name} className="flex items-center gap-4">
                     <div>

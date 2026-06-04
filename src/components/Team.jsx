@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import teamData from '../data/team.json'
@@ -27,7 +26,10 @@ function TeamCard({ member, index, inView }) {
             onError={() => setImgError(true)}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-jubla flex items-center justify-center">
+          <div
+            className="w-full h-full flex items-center justify-center"
+            style={{ backgroundColor: '#283583' }}
+          >
             <span className="font-heading font-bold text-white text-xl">{initials}</span>
           </div>
         )}
@@ -44,7 +46,6 @@ function TeamCard({ member, index, inView }) {
 }
 
 export default function Team() {
-  const navigate = useNavigate()
   const { ref, inView } = useInView({ threshold: 0.05 })
 
   return (
@@ -78,7 +79,7 @@ export default function Team() {
           <img
             src="/gruppenfoto.png"
             alt="Gruppenfoto Leitungsteam"
-            className="w-full object-cover max-h-[650px]"
+            className="w-full object-cover max-h-[560px]"
           />
         </motion.div>
 
@@ -97,7 +98,7 @@ export default function Team() {
               </motion.h3>
               <div className={`grid gap-4 ${
                 group === 'Scharleitung'
-                  ? 'grid-cols-2 sm:grid-cols-4'
+                  ? 'grid-cols-2 sm:grid-cols-5'
                   : group === 'Präses'
                   ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4'
                   : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'
@@ -109,6 +110,7 @@ export default function Team() {
             </div>
           )
         })}
+
       </div>
     </section>
   )

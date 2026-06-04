@@ -13,11 +13,18 @@ const contacts = [
     image: 'jil.png',
   },
   {
-    name: 'Dean Badrutt',
+    name: 'Noel von Däniken',
     role: 'Scharleitung',
-    phone: '+41 78 866 59 87',
-    whatsapp: 'https://wa.me/41788665987',
-    image: 'dean.png',
+    phone: '+41 76 544 40 95',
+    whatsapp: 'https://wa.me/41765444095',
+    image: 'noel.png',
+  },
+  {
+    name: 'Linus Kreis',
+    role: 'Scharleitung',
+    phone: '+41 76 574 82 23',
+    whatsapp: 'https://wa.me/41765748223',
+    image: 'linus.png',
   },
 ]
 
@@ -115,7 +122,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Contact cards */}
-        <div className="grid sm:grid-cols-2 gap-6 mb-10">
+        <div className="grid sm:grid-cols-3 gap-6 mb-10">
           {contacts.map((person, i) => (
             <ContactCard key={person.name} person={person} index={i} inView={inView} />
           ))}
