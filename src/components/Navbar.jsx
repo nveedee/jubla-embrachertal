@@ -48,18 +48,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center group">
-              <motion.div whileHover={{ scale: 1.02 }}>
-                <img
-                  src="/logo.png"
-                  alt="Jubla Embrachertal"
-                  className="h-10 w-auto object-contain"
-                />
+            <Link to="/" className="flex items-center">
+              <motion.div whileHover={{ scale: 1.02 }} className="flex flex-col leading-none">
+                <span className="font-heading font-black text-white text-base">Jubla</span>
+                <span className="font-body text-white/70 text-xs">Embrachertal</span>
               </motion.div>
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-1 px-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}

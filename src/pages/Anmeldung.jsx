@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader'
 
 const groups = [
   { name: 'Jublinis', age: '1. Kindergarten – 1. Klasse', note: 'Nach Absprache früher möglich' },
-  { name: 'Girls', age: '2. – 5. Klasse', note: 'Mädchengruppe' },
+  { name: 'Wildi Füchsli', age: '2. – 5. Klasse', note: 'Mädchengruppe' },
   { name: 'Kaugummischlangä', age: '2. – 5. Klasse', note: 'Jungsgruppe' },
   { name: '15ner', age: '6. Klasse – 3. Oberstufe', note: '' },
 ]
@@ -93,7 +93,7 @@ export default function Anmeldung() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold mt-0.5">3</span>
-                  Sende es per WhatsApp an Jil Grabner oder Dean Badrutt
+                  Sende es per WhatsApp an Jil, Noel oder Linus
                 </li>
               </ol>
 
@@ -118,7 +118,7 @@ export default function Anmeldung() {
                   className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white font-heading font-semibold px-6 py-4 rounded-2xl transition-colors duration-300"
                 >
                   <FaWhatsapp size={20} />
-                  WhatsApp Jil / Dean
+                  WhatsApp Jil / Noel / Linus
                 </motion.a>
               </div>
             </div>
