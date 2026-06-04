@@ -1,15 +1,55 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import {
+  HiChevronRight, HiUserGroup, HiSun, HiPhotograph,
+  HiUsers, HiCalendar, HiMail,
+} from 'react-icons/hi'
 import Hero from '../components/Hero'
 import Stats from '../components/Stats'
 
 const quickNavCards = [
-  { to: '/wer-sind-wir', title: 'Wer sind wir?', desc: 'Lerne uns und unsere Werte kennen' },
-  { to: '/lager', title: 'Sommerlager', desc: 'Zwei Wochen Abenteuer in den Bergen' },
-  { to: '/bilder', title: 'Bilder', desc: 'Einblicke in unsere unvergesslichen Momente' },
-  { to: '/team', title: 'Team', desc: 'Die Menschen hinter der Jubla' },
-  { to: '/agenda', title: 'Agenda', desc: 'Kommende Events und Termine' },
-  { to: '/kontakt', title: 'Kontakt', desc: 'Fragen, Anmeldung, Infos' },
+  {
+    to: '/wer-sind-wir',
+    icon: HiUserGroup,
+    title: 'Wer sind wir?',
+    desc: 'Lerne uns und unsere Werte kennen',
+    color: '#283583',
+  },
+  {
+    to: '/lager',
+    icon: HiSun,
+    title: 'Sommerlager',
+    desc: 'Zwei Wochen Abenteuer in den Bergen',
+    color: '#2598D5',
+  },
+  {
+    to: '/bilder',
+    icon: HiPhotograph,
+    title: 'Bilder',
+    desc: 'Einblicke in unsere unvergesslichen Momente',
+    color: '#E6007E',
+  },
+  {
+    to: '/team',
+    icon: HiUsers,
+    title: 'Team',
+    desc: 'Die Menschen hinter der Jubla',
+    color: '#283583',
+  },
+  {
+    to: '/agenda',
+    icon: HiCalendar,
+    title: 'Agenda',
+    desc: 'Kommende Events und Termine',
+    color: '#2598D5',
+  },
+  {
+    to: '/kontakt',
+    icon: HiMail,
+    title: 'Kontakt',
+    desc: 'Fragen, Anmeldung, Infos',
+    color: '#E6007E',
+  },
 ]
 
 export default function Home() {
@@ -40,29 +80,63 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quickNavCards.map((card, i) => (
-              <motion.div
-                key={card.to}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.5 }}
-              >
-                <Link to={card.to} className="group block">
-                  <div className="bg-white rounded-2xl p-7 shadow-jubla hover:shadow-jubla-lg border border-gray-50 hover:border-secondary/30 transition-all duration-300 group-hover:-translate-y-1">
-                    <h3 className="font-heading font-bold text-xl text-jubla-dark group-hover:text-primary transition-colors duration-300 mb-2">
-                      {card.title}
-                    </h3>
-                    <p className="font-body text-jubla-gray text-sm leading-relaxed">
-                      {card.desc}
-                    </p>
-                    <div className="mt-4 flex items-center gap-1 font-body text-sm font-medium text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Mehr erfahren <span className="text-base">→</span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+            {quickNavCards.map((card, i) => {
+              const Icon = card.icon
+              return (
+                <motion.div
+                  key={card.to}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08, duration: 0.5 }}
+                >
+                  <Link to={card.to} className="block group">
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                      className="relative bg-white rounded-2xl p-6 border border-gray-100 overflow-hidden shadow-sm hover:shadow-jubla transition-shadow duration-300"
+                      style={{ backgroundColor: card.color + '08' }}
+                    >
+                      {/* Left accent bar */}
+                      <div
+                        className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom"
+                        style={{ backgroundColor: '#E6007E' }}
+                      />
+
+                      {/* Icon badge */}
+                      <div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                        style={{ backgroundColor: card.color + '18' }}
+                      >
+                        <Icon size={26} style={{ color: card.color }} />
+                      </div>
+
+                      {/* Text */}
+                      <h3
+                        className="font-heading font-bold text-lg mb-1.5 transition-colors duration-200"
+                        style={{ color: card.color }}
+                      >
+                        {card.title}
+                      </h3>
+                      <p className="font-body text-jubla-gray text-sm leading-relaxed">
+                        {card.desc}
+                      </p>
+
+                      {/* Arrow */}
+                      <div className="flex justify-end mt-4">
+                        <motion.div
+                          className="w-7 h-7 rounded-full flex items-center justify-center transition-colors duration-200"
+                          style={{ backgroundColor: card.color + '18' }}
+                          whileHover={{ x: 3 }}
+                        >
+                          <HiChevronRight size={16} style={{ color: card.color }} />
+                        </motion.div>
+                      </div>
+                    </motion.div>
+                  </Link>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>

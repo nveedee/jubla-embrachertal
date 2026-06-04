@@ -41,7 +41,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white/90 backdrop-blur-xl shadow-jubla py-3'
+            ? 'bg-[#283583] shadow-jubla py-3'
             : 'bg-transparent py-5'
         }`}
       >
@@ -64,9 +64,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className={`relative px-4 py-2 font-body font-medium text-sm transition-colors duration-300 rounded-full group ${
-                    scrolled ? 'text-jubla-dark hover:text-primary' : 'text-white/90 hover:text-white'
-                  }`}
+                  className="relative px-4 py-2 font-body font-medium text-sm text-white/90 hover:text-white transition-colors duration-300 rounded-full group"
                 >
                   {link.label}
                   <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-accent rounded-full transition-all duration-300 ${
@@ -79,9 +77,7 @@ export default function Navbar() {
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`md:hidden p-2 rounded-lg transition-colors ${
-                scrolled ? 'text-primary' : 'text-white'
-              }`}
+              className="md:hidden p-2 rounded-lg text-white transition-colors"
             >
               {menuOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
             </button>

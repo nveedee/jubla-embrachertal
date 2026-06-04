@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function PageHeader({ title, subtitle, emoji, waveFill = 'white' }) {
   return (
     <div className="relative overflow-hidden" style={{ minHeight: '280px' }}>
-      <div className="absolute inset-0 bg-gradient-jubla" />
+      <div className="absolute inset-0 bg-[#283583]" />
 
       <div
         className="absolute inset-0 opacity-10"
@@ -15,7 +15,6 @@ export default function PageHeader({ title, subtitle, emoji, waveFill = 'white' 
       />
 
       <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
