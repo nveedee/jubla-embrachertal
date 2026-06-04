@@ -67,7 +67,7 @@ export default function Navbar() {
                   className="relative px-4 py-2 font-body font-medium text-sm text-white/90 hover:text-white transition-colors duration-300 rounded-full group"
                 >
                   {link.label}
-                  <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-accent rounded-full transition-all duration-300 ${
+                  <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-white rounded-full transition-all duration-300 ${
                     isActive(link.to) ? 'w-4/5' : 'w-0 group-hover:w-4/5'
                   }`} />
                 </Link>

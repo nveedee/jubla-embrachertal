@@ -66,7 +66,7 @@ export default function AboutUs() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigate('/gruppenstunde')}
-              className="btn-primary"
+              className="inline-flex items-center gap-2 bg-[#283583] hover:bg-[#1e2666] text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-300"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.8 }}
