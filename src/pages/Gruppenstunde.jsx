@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { HiDownload, HiCalendar, HiCurrencyDollar, HiUserGroup, HiPhone } from 'react-icons/hi'
+import { HiDownload, HiCalendar, HiCurrencyDollar, HiUserGroup, HiPhone, HiDocumentText } from 'react-icons/hi'
 import { FaWhatsapp } from 'react-icons/fa'
 import PageHeader from '../components/PageHeader'
 
@@ -10,13 +10,15 @@ const groups = [
     note: 'Nach Absprache früher möglich',
     color: '#283583',
     leaders: ['Noel', 'Linus', 'Livia', 'Melvin'],
+    pdf: '/Halbjahresprogramm_Jublinis_2026.pdf',
   },
   {
-    name: 'Füchsli',
+    name: 'Wildi Füchsli',
     age: '2. – 5. Klasse',
-    note: '',
+    note: 'Mädchengruppe',
     color: '#2598D5',
     leaders: ['Valentina', 'Alisha', 'Jil'],
+    pdf: '/Halbjahresprogramm_Girls_2026.pdf',
   },
   {
     name: 'Kaugummischlangä',
@@ -24,13 +26,15 @@ const groups = [
     note: 'Jungsgruppe',
     color: '#283583',
     leaders: ['Matteo', 'Fernando', 'Lars', 'Jay'],
+    pdf: '/Halbjahresprogramm Kaugummischlangä (1).pdf',
   },
   {
     name: '15ner',
     age: '6. Klasse – 3. Oberstufe',
-    note: '',
+    note: 'Für junge Jugendliche',
     color: '#2598D5',
     leaders: ['Tina', 'Yannis', 'Nina', 'Marlon'],
+    pdf: '/Halbjahresprogramm_15ner_2026.pdf',
   },
 ]
 
@@ -111,6 +115,15 @@ export default function Gruppenstunde() {
                       </span>
                     ))}
                   </div>
+                  {g.pdf && (
+                    <button
+                      onClick={() => window.open(g.pdf, '_blank')}
+                      className="mt-4 flex items-center gap-2 bg-[#283583] hover:bg-[#1e2666] text-white font-heading font-semibold text-xs px-4 py-2 rounded-full transition-colors duration-200"
+                    >
+                      <HiDocumentText size={14} />
+                      Halbjahresprogramm ansehen
+                    </button>
+                  )}
                 </motion.div>
               ))}
             </div>
