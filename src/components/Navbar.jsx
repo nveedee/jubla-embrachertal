@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import DarkModeToggle from './DarkModeToggle'
 
 const navLinks = [
   { label: 'Home', to: '/' },
@@ -70,6 +71,9 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
+
+            {/* Dark mode toggle */}
+            <DarkModeToggle />
 
             {/* Mobile Hamburger */}
             <button

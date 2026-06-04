@@ -17,7 +17,7 @@ export default function Principles() {
   const { ref, inView } = useInView({ threshold: 0.1 })
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-[#0f172a] relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
@@ -47,7 +47,7 @@ export default function Principles() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: i * 0.1, duration: 0.6, ease: 'easeOut' }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative bg-white rounded-2xl p-6 shadow-jubla hover:shadow-jubla-lg transition-all duration-400 cursor-default border border-gray-100 hover:border-transparent overflow-hidden"
+                className="group relative bg-white dark:bg-[#1e293b] dark:border-slate-700 rounded-2xl p-6 shadow-jubla hover:shadow-jubla-lg transition-all duration-400 cursor-default border border-gray-100 hover:border-transparent overflow-hidden"
               >
                 {/* Hover gradient background */}
                 <motion.div
@@ -72,10 +72,10 @@ export default function Principles() {
                 </div>
 
                 {/* Content */}
-                <h3 className="font-heading font-bold text-lg text-jubla-dark mb-2 relative z-10">
+                <h3 className="font-heading font-bold text-lg text-jubla-dark dark:text-white mb-2 relative z-10">
                   {p.title}
                 </h3>
-                <p className="font-body text-sm text-jubla-gray leading-relaxed relative z-10">
+                <p className="font-body text-sm text-jubla-gray dark:text-slate-400 leading-relaxed relative z-10">
                   {p.description}
                 </p>
 

@@ -16,7 +16,7 @@ export default function AboutUs() {
   const { ref, inView } = useInView({ threshold: 0.15 })
 
   return (
-    <section id="ueber-uns" className="py-24 bg-jubla-light relative overflow-hidden">
+    <section id="ueber-uns" className="py-24 bg-jubla-light dark:bg-[#1e293b] relative overflow-hidden">
       <div className="absolute top-10 right-0 w-96 h-96 bg-secondary/8 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
 
@@ -34,14 +34,14 @@ export default function AboutUs() {
               Mehr als ein{' '}
               <span className="text-transparent bg-clip-text bg-gradient-jubla">Verein</span>
             </h2>
-            <p className="font-body text-jubla-gray text-lg leading-relaxed mb-6">
+            <p className="font-body text-jubla-gray dark:text-slate-400 text-lg leading-relaxed mb-6">
               Die Jubla Embrachertal ist ein Ort, wo{' '}
               <strong className="text-primary">Lebensfreu(n)de</strong> entsteht.
               Seit über 20 Jahren begleiten wir Kinder und Jugendliche auf ihrem Weg –
               mit <strong className="text-secondary">Abenteuer</strong>, Kreativität
               und echter <strong className="text-primary">Gemeinschaft</strong>.
             </p>
-            <p className="font-body text-jubla-gray text-lg leading-relaxed mb-8">
+            <p className="font-body text-jubla-gray dark:text-slate-400 text-lg leading-relaxed mb-8">
               Bei uns entstehen <strong className="text-secondary">Freunde fürs Leben</strong>.
               Durch hochwertige Freizeitgestaltung, spannende Lager und gemeinsame
               Erlebnisse wachsen Kinder zu selbstständigen, empathischen Menschen heran.
@@ -57,7 +57,7 @@ export default function AboutUs() {
                   className="flex items-center gap-3"
                 >
                   <HiCheckCircle size={20} style={{ color: h.color }} />
-                  <span className="font-body font-medium text-jubla-dark">{h.text}</span>
+                  <span className="font-body font-medium text-jubla-dark dark:text-white">{h.text}</span>
                 </motion.div>
               ))}
             </div>

@@ -27,10 +27,10 @@ function StatItem({ stat, isVisible }) {
       <div className="font-heading font-black text-5xl md:text-6xl text-primary counter-value">
         {count}{stat.suffix}
       </div>
-      <div className="font-heading font-bold text-xl text-jubla-dark mt-2">
+      <div className="font-heading font-bold text-xl text-jubla-dark dark:text-white mt-2">
         {stat.label}
       </div>
-      <div className="font-body text-sm text-jubla-gray mt-1">
+      <div className="font-body text-sm text-jubla-gray dark:text-slate-400 mt-1">
         {stat.desc}
       </div>
     </motion.div>
@@ -41,7 +41,7 @@ export default function Stats() {
   const { ref, inView } = useInView({ threshold: 0.3 })
 
   return (
-    <section id="stats" className="py-20 bg-jubla-light relative overflow-hidden">
+    <section id="stats" className="py-20 bg-jubla-light dark:bg-[#1e293b] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
