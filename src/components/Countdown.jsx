@@ -43,7 +43,7 @@ function CountdownUnit({ value, label, delay }) {
         </div>
         <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-[#E6007E]" />
       </div>
-      <span className="font-body font-semibold text-xs md:text-sm text-jubla-gray dark:text-slate-400 mt-3 uppercase tracking-widest">
+      <span className="font-body font-semibold text-xs md:text-sm text-jubla-gray mt-3 uppercase tracking-widest">
         {label}
       </span>
     </motion.div>
@@ -73,12 +73,12 @@ export default function Countdown() {
 
   if (!timeLeft) {
     return (
-      <section className="py-16 bg-white dark:bg-[#0f172a]">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-heading font-black text-3xl text-primary">
             Das Sommerlager läuft gerade!
           </h2>
-          <p className="font-body text-jubla-gray dark:text-slate-400 mt-2">
+          <p className="font-body text-jubla-gray mt-2">
             Wir sind im Lager – bis bald!
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function Countdown() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-[#0f172a] relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       </div>
@@ -103,10 +103,10 @@ export default function Countdown() {
             <span className="w-2 h-2 rounded-full bg-[#E6007E] animate-pulse" />
             Sommerlager 2026
           </span>
-          <h2 className="font-heading font-black text-3xl md:text-5xl text-primary dark:text-white mb-3">
+          <h2 className="font-heading font-black text-3xl md:text-5xl text-primary mb-3">
             Noch so lange bis zum Lager!
           </h2>
-          <p className="font-body text-jubla-gray dark:text-slate-400 text-lg">
+          <p className="font-body text-jubla-gray text-lg">
             11. – 18. Juli 2026 · Sedrun, Graubünden
           </p>
         </motion.div>
@@ -127,7 +127,7 @@ export default function Countdown() {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="font-body text-jubla-gray dark:text-slate-400 mb-4">
+          <p className="font-body text-jubla-gray mb-4">
             Noch nicht angemeldet?
           </p>
           <Link

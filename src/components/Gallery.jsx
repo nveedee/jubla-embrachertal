@@ -111,7 +111,7 @@ export default function Gallery() {
   const nextItem = () => setLightboxIndex(i => (i + 1) % galleryItems.length)
 
   return (
-    <section id="galerie" className="py-24 bg-white dark:bg-[#0f172a] relative overflow-hidden">
+    <section id="galerie" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -53,13 +53,13 @@ export default function Home() {
       <Stats />
       <Countdown />
 
-      <section className="py-24 bg-white dark:bg-[#0f172a] relative overflow-hidden">
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 dark:[&_h2]:text-white dark:[&_p]:text-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Home() {
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                      className="relative bg-white dark:bg-[#1e293b] dark:border-slate-700 rounded-2xl p-6 border border-gray-100 overflow-hidden shadow-sm hover:shadow-jubla transition-shadow duration-300"
+                      className="relative bg-white rounded-2xl p-6 border border-gray-100 overflow-hidden shadow-sm hover:shadow-jubla transition-shadow duration-300"
                       style={{ backgroundColor: card.color + '08' }}
                     >
                       {/* Left accent bar */}
@@ -113,7 +113,7 @@ export default function Home() {
                       >
                         {card.title}
                       </h3>
-                      <p className="font-body text-jubla-gray dark:text-slate-400 text-sm leading-relaxed">
+                      <p className="font-body text-jubla-gray text-sm leading-relaxed">
                         {card.desc}
                       </p>
 
