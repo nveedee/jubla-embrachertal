@@ -65,7 +65,7 @@ export default function Gruppenstunde() {
             {[
               { icon: HiCalendar, label: '1× pro Monat', sub: 'Samstag, 14:00 – 16:00 Uhr' },
               { icon: HiCurrencyDollar, label: 'CHF 50.–', sub: 'Jahresbeitrag' },
-              { icon: HiUserGroup, label: 'Alle willkommen', sub: 'Ohne religiöse Inhalte' },
+              { icon: HiUserGroup, label: 'Alle willkommen', sub: '' },
             ].map(({ icon: Icon, label, sub }, i) => (
               <motion.div
                 key={label}
