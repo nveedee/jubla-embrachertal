@@ -1,19 +1,12 @@
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { HiArrowDown } from 'react-icons/hi'
-
 export default function Hero() {
   const containerRef = useRef(null)
   const navigate = useNavigate()
   const { scrollY } = useScroll()
   const y = useTransform(scrollY, [0, 600], [0, 150])
   const opacity = useTransform(scrollY, [0, 400], [1, 0])
-
-  const handleScrollDown = () => {
-    const el = document.getElementById('stats')
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -110,24 +103,6 @@ export default function Hero() {
           </motion.button>
         </motion.div>
       </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.button
-        onClick={handleScrollDown}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors group"
-      >
-        <span className="font-body text-xs tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-8 h-8 border-2 border-white/40 rounded-full flex items-center justify-center group-hover:border-secondary transition-colors"
-        >
-          <HiArrowDown size={14} />
-        </motion.div>
-      </motion.button>
     </section>
   )
 }

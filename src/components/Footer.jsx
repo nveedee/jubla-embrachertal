@@ -110,9 +110,20 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-white/40 text-xs">
-            © {new Date().getFullYear()} Jubla Embrachertal. Alle Rechte vorbehalten.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p className="font-body text-white/40 text-xs">
+              © {new Date().getFullYear()} Jubla Embrachertal. Alle Rechte vorbehalten.
+            </p>
+            <span className="hidden sm:inline text-white/30 text-xs">·</span>
+            <a
+              href="/Datenschutz_Embrachertal.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-white/40 hover:text-white text-xs transition-colors duration-200"
+            >
+              Datenschutzerklärung
+            </a>
+          </div>
           <p className="font-body text-white/40 text-xs flex items-center gap-1">
             Gemacht mit <HiHeart className="text-accent" size={12} /> im Embrachertal
           </p>
