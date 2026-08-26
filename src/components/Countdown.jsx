@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 
-const LAGER_DATE = new Date('2026-07-11T08:00:00')
+const LAGER_DATE = new Date('2027-07-10T08:00:00')
 
 function getTimeLeft() {
   const now = new Date()
@@ -101,13 +101,13 @@ export default function Countdown() {
         >
           <span className="inline-flex items-center gap-2 bg-[#283583]/10 text-[#283583] rounded-full px-5 py-2 text-sm font-body font-semibold mb-4">
             <span className="w-2 h-2 rounded-full bg-[#E6007E] animate-pulse" />
-            Sommerlager 2026
+            Sommerlager 2027
           </span>
           <h2 className="font-heading font-black text-3xl md:text-5xl text-primary mb-3">
             Noch so lange bis zum Lager!
           </h2>
           <p className="font-body text-jubla-gray text-lg">
-            11. – 18. Juli 2026 · Sedrun, Graubünden
+            10. – 17. Juli 2027 · Sedrun, Graubünden
           </p>
         </motion.div>
 

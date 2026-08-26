@@ -10,15 +10,20 @@ const groups = [
     note: 'Nach Absprache früher möglich',
     color: '#283583',
     leaders: ['Tina', 'Noel', 'Nina'],
-    pdf: '/Halbjahresprogramm_Jublinis_2026.pdf',
   },
   {
-    name: 'Wildi Füchsli',
+    name: 'Wülchli',
+    age: '2. – 5. Klasse',
+    note: 'Mädchengruppe',
+    color: '#2598D5',
+    leaders: ['Valentina', 'Seraina', 'Jay'],
+  },
+  {
+    name: 'Glitzer Füchsli',
     age: '2. – 5. Klasse',
     note: 'Mädchengruppe',
     color: '#2598D5',
     leaders: ['Livia', 'Jil', 'Yannis'],
-    pdf: '/Halbjahresprogramm_Girls_2026.pdf',
   },
   {
     name: 'Kaugummischlangä',
@@ -26,7 +31,6 @@ const groups = [
     note: 'Jungsgruppe',
     color: '#283583',
     leaders: ['Lars', 'Matteo', 'Marlon G.'],
-    pdf: '/Halbjahresprogramm_Kaugummischlangae_2026.pdf',
   },
   {
     name: '15ner',
@@ -34,7 +38,6 @@ const groups = [
     note: 'Für junge Jugendliche',
     color: '#2598D5',
     leaders: ['Melvin', 'Linus', 'Robin', 'Alisha', 'Marlon'],
-    pdf: '/Halbjahresprogramm_15ner_2026.pdf',
   },
 ]
 
@@ -43,7 +46,7 @@ export default function Gruppenstunde() {
     <main>
       <PageHeader
         title="Gruppenstunde"
-        subtitle="Einmal im Monat zusammen spielen, lachen und Freunde finden."
+        subtitle="Alle zwei Wochen zusammen spielen, lachen und Freunde finden."
         waveFill="#F8FAFC"
       />
 
@@ -63,7 +66,7 @@ export default function Gruppenstunde() {
             className="grid grid-cols-3 gap-4 mb-10"
           >
             {[
-              { icon: HiCalendar, label: '1× pro Monat', sub: 'Samstag, 14:00 – 16:00 Uhr' },
+              { icon: HiCalendar, label: 'Alle 2 Wochen', sub: 'Samstag, 14:00 – 16:00 Uhr' },
               { icon: HiCurrencyDollar, label: 'CHF 50.–', sub: 'Jahresbeitrag' },
               { icon: HiUserGroup, label: 'Alle willkommen', sub: '' },
             ].map(({ icon: Icon, label, sub }, i) => (

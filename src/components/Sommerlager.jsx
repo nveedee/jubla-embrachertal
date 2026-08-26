@@ -24,7 +24,7 @@ const keyInfo = [
   {
     icon: HiUserGroup,
     label: 'Alter',
-    value: '1. Klasse – 3. Oberstufe',
+    value: '1. Klasse – 17 Jahre',
     sub: 'Beschränkte Anzahl Plätze',
   },
 ]
@@ -91,14 +91,14 @@ export default function Sommerlager() {
             Anmeldung offen
           </span>
           <h2 className="font-heading font-black text-4xl md:text-6xl text-white mb-6">
-            Sommerlager 2026
+            Sommerlager 2027
           </h2>
           <p className="font-body text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-4">
-            Unser Sommerlager 2025 war ein riesiges Abenteuer – wir haben zusammen gelacht,
+            Unser Sommerlager 2026 war ein riesiges Abenteuer – wir haben zusammen gelacht,
             gespielt, Neues gelernt und jede Menge tolle Erinnerungen gesammelt.
           </p>
           <p className="font-body text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Jetzt geht es in die nächste Runde! Das Sommerlager 2026 steht vor der Tür –
+            Jetzt geht es in die nächste Runde! Das Sommerlager 2027 steht vor der Tür –
             sichere dir jetzt deinen Platz und sei dabei!
           </p>
         </motion.div>
