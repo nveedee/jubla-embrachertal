@@ -91,7 +91,7 @@ export default function Footer() {
             <h4 className="font-heading font-bold text-white mb-4">Kontakt</h4>
             <div className="space-y-3 font-body text-sm text-white/60">
               <p>📍 Embrach, Kanton Zürich</p>
-              <p>📧 hallo@jubla-embrachertal.ch</p>
+              <p>📧 <a href="mailto:infos@jublaembrachertal.ch" className="hover:text-white transition-colors">infos@jublaembrachertal.ch</a></p>
               <p>📱 @jubla_embrachertal</p>
             </div>
             <div className="mt-6">
