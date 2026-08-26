@@ -26,7 +26,7 @@ const groups = [
     note: 'Jungsgruppe',
     color: '#283583',
     leaders: ['Lars', 'Matteo', 'Marlon G.'],
-    pdf: '/Halbjahresprogramm Kaugummischlangä (1).pdf',
+    pdf: '/Halbjahresprogramm_Kaugummischlangae_2026.pdf',
   },
   {
     name: '15ner',

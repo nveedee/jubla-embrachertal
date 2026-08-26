@@ -4,5 +4,6 @@ RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(js|css|png|jpe?g|svg|gif|webp|ico|pdf|json|woff2?|ttf|map)$ [NC]
 RewriteRule . /index.html [L]
 </IfModule>
