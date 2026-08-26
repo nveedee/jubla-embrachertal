@@ -6,7 +6,7 @@ const keyInfo = [
   {
     icon: HiCalendar,
     label: 'Datum',
-    value: '11. – 18. Juli 2026',
+    value: '10. – 17. Juli 2027',
     sub: 'Samstag bis Samstag',
   },
   {
