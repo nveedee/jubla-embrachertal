@@ -9,7 +9,7 @@ const groups = [
     age: '1. Kindergarten – 1. Klasse',
     note: 'Nach Absprache früher möglich',
     color: '#283583',
-    leaders: ['Noel', 'Linus', 'Livia', 'Melvin'],
+    leaders: ['Tina', 'Noel', 'Nina'],
     pdf: '/Halbjahresprogramm_Jublinis_2026.pdf',
   },
   {
@@ -17,7 +17,7 @@ const groups = [
     age: '2. – 5. Klasse',
     note: 'Mädchengruppe',
     color: '#2598D5',
-    leaders: ['Valentina', 'Alisha', 'Jil'],
+    leaders: ['Livia', 'Jil', 'Yannis'],
     pdf: '/Halbjahresprogramm_Girls_2026.pdf',
   },
   {
@@ -25,7 +25,7 @@ const groups = [
     age: '2. – 5. Klasse',
     note: 'Jungsgruppe',
     color: '#283583',
-    leaders: ['Matteo', 'Fernando', 'Lars', 'Jay'],
+    leaders: ['Lars', 'Matteo', 'Marlon G.'],
     pdf: '/Halbjahresprogramm Kaugummischlangä (1).pdf',
   },
   {
@@ -33,7 +33,7 @@ const groups = [
     age: '6. Klasse – 3. Oberstufe',
     note: 'Für junge Jugendliche',
     color: '#2598D5',
-    leaders: ['Tina', 'Yannis', 'Nina', 'Marlon'],
+    leaders: ['Melvin', 'Linus', 'Robin', 'Alisha', 'Marlon'],
     pdf: '/Halbjahresprogramm_15ner_2026.pdf',
   },
 ]

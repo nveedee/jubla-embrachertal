@@ -10,21 +10,21 @@ const contacts = [
     role: 'Scharleitung',
     phone: '+41 79 451 35 81',
     whatsapp: 'https://wa.me/41794513581',
-    image: 'jil.png',
+    image: 'jil.jpeg',
   },
   {
     name: 'Noel von Däniken',
     role: 'Scharleitung',
     phone: '+41 76 544 40 95',
     whatsapp: 'https://wa.me/41765444095',
-    image: 'noel.png',
+    image: 'noel.jpeg',
   },
   {
     name: 'Linus Kreis',
     role: 'Scharleitung',
     phone: '+41 76 574 82 23',
     whatsapp: 'https://wa.me/41765748223',
-    image: 'linus.png',
+    image: 'linus.jpeg',
   },
 ]
 
