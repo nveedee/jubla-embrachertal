@@ -85,7 +85,7 @@ export default function AboutUs() {
           >
             <div className="rounded-3xl overflow-hidden shadow-jubla-lg">
               <img
-                src="/gruppenfoto.png"
+                src="/Gruppenfoto.jpeg"
                 alt="Jubla Embrachertal Team"
                 className="w-full h-full object-cover"
               />

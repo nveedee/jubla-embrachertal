@@ -77,7 +77,7 @@ export default function Team() {
           className="mb-14 rounded-3xl overflow-hidden shadow-jubla-lg"
         >
           <img
-            src="/gruppenfoto.png"
+            src="/Gruppenfoto.jpeg"
             alt="Gruppenfoto Leitungsteam"
             className="w-full object-cover max-h-[560px]"
           />

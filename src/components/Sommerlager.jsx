@@ -12,8 +12,8 @@ const keyInfo = [
   {
     icon: HiLocationMarker,
     label: 'Ort',
-    value: 'Sedrun, Graubünden',
-    sub: 'Ustria Planatsch',
+    value: 'Wird noch bekannt gegeben',
+    sub: '',
   },
   {
     icon: HiCurrencyDollar,
@@ -256,18 +256,12 @@ export default function Sommerlager() {
 
             <div>
               <h4 className="font-heading font-bold text-lg text-primary mb-4">
-                <span className="flex items-center gap-2"><HiLocationMarker className="text-secondary" /> Sedrun, Graubünden</span>
+                <span className="flex items-center gap-2"><HiLocationMarker className="text-secondary" /> Lagerort</span>
               </h4>
-              <div className="rounded-2xl overflow-hidden h-44">
-                <iframe
-                  title="Sommerlager Standort"
-                  src="https://maps.google.com/maps?q=Ustria+Planatsch,+Sedrun,+Schweiz&output=embed&z=13"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+              <div className="rounded-2xl overflow-hidden h-44 bg-jubla-light flex items-center justify-center p-4 text-center">
+                <p className="font-body text-jubla-gray text-sm">
+                  Der Lagerort für 2027 steht noch nicht fest und wird rechtzeitig bekannt gegeben.
+                </p>
               </div>
             </div>
           </div>

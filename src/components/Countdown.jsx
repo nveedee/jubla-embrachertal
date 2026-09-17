@@ -107,7 +107,7 @@ export default function Countdown() {
             Noch so lange bis zum Lager!
           </h2>
           <p className="font-body text-jubla-gray text-lg">
-            10. – 17. Juli 2027 · Sedrun, Graubünden
+            10. – 17. Juli 2027 · Ort wird noch bekannt gegeben
           </p>
         </motion.div>
 
