@@ -1,13 +1,34 @@
-import { useState } from 'react'
+import { useRef, useState, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import teamData from '../data/team.json'
 
+const FernandoGame = lazy(() => import('./FernandoGame'))
+
 const groups = ['Scharleitung', 'Leiterinnen & Leiter', 'Präses']
+
+// Triple-click/tap easter egg: 3 clicks within this window opens the minigame
+const EASTER_EGG_NAME = 'Fernando Fleischli'
+const EASTER_EGG_WINDOW_MS = 600
+const EASTER_EGG_CLICKS = 3
 
 function TeamCard({ member, index, inView }) {
   const [imgError, setImgError] = useState(false)
+  const [gameOpen, setGameOpen] = useState(false)
+  const clickTimestamps = useRef([])
   const initials = member.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()
+
+  const handleClick = () => {
+    if (member.name !== EASTER_EGG_NAME) return
+    const now = Date.now()
+    const recent = clickTimestamps.current.filter((t) => now - t < EASTER_EGG_WINDOW_MS)
+    recent.push(now)
+    clickTimestamps.current = recent
+    if (recent.length >= EASTER_EGG_CLICKS) {
+      clickTimestamps.current = []
+      setGameOpen(true)
+    }
+  }
 
   return (
     <motion.div
@@ -15,6 +36,7 @@ function TeamCard({ member, index, inView }) {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.06, duration: 0.5 }}
       whileHover={{ y: -6 }}
+      onClick={handleClick}
       className="bg-white rounded-2xl p-5 shadow-jubla hover:shadow-jubla-lg transition-all duration-300 text-center border border-gray-50 group"
     >
       <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-secondary/40 transition-all duration-300">
@@ -41,6 +63,12 @@ function TeamCard({ member, index, inView }) {
       <p className="font-body text-xs text-secondary mt-1 leading-snug">
         {member.role}
       </p>
+
+      {gameOpen && (
+        <Suspense fallback={null}>
+          <FernandoGame onClose={() => setGameOpen(false)} />
+        </Suspense>
+      )}
     </motion.div>
   )
 }
