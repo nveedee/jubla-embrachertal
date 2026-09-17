@@ -17,7 +17,7 @@ function TeamCard({ member, index, inView }) {
       whileHover={{ y: -6 }}
       className="bg-white rounded-2xl p-5 shadow-jubla hover:shadow-jubla-lg transition-all duration-300 text-center border border-gray-50 group"
     >
-      <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-secondary/40 transition-all duration-300">
+      <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-secondary/40 transition-all duration-300">
         {!imgError ? (
           <img
             src={`/${member.image}`}
@@ -30,7 +30,7 @@ function TeamCard({ member, index, inView }) {
             className="w-full h-full flex items-center justify-center"
             style={{ backgroundColor: '#283583' }}
           >
-            <span className="font-heading font-bold text-white text-xl">{initials}</span>
+            <span className="font-heading font-bold text-white text-2xl">{initials}</span>
           </div>
         )}
       </div>
