@@ -12,7 +12,6 @@
   { "id": 9,  "name": "Yannis Clerc",      "role": "Leitung 15er & Materialchef",                "group": "Leiterinnen & Leiter",  "image": "yannis.png" },
   { "id": 12, "name": "Tina Hager",        "role": "Leitung 15er",                               "group": "Leiterinnen & Leiter",  "image": "tina.png" },
   { "id": 13, "name": "Nina Wüest",        "role": "Leitung 15er",                               "group": "Leiterinnen & Leiter",  "image": "nina.png" },
-  { "id": 14, "name": "Marlon Leppin",     "role": "Leitung 15er",                               "group": "Leiterinnen & Leiter",  "image": "marlon.png" },
   { "id": 21, "name": "Melvin Stiefel",    "role": "Leitung 15er",                               "group": "Leiterinnen & Leiter",  "image": "melvin.png" },
   { "id": 8,  "name": "Robin Frei",        "role": "Jungleiter",                                 "group": "Leiterinnen & Leiter",  "image": "robin.png" },
   { "id": 16, "name": "Nils von Däniken",  "role": "Leitung 15er & Webmaster",                   "group": "Leiterinnen & Leiter",  "image": "nils.png" },
